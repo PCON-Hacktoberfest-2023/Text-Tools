@@ -7,7 +7,7 @@ export default function TextForm(props) {
 		props.showAlert("Converted to uppercase!", "success");
 	};
 
-	const handleDownClick = () => {
+	const handleLowCase = () => {
 		let newText = text.toLowerCase();
 		setText(newText);
 		props.showAlert("Converted to lowercase!", "success");
@@ -53,7 +53,7 @@ export default function TextForm(props) {
 				<button
 					disabled={text.length === 0}
 					className="btn btn-primary mx-1 my-1"
-					onClick={handleDownClick}
+					onClick={handleLowCase}
 				>
 					Convert to Lowercase
 				</button>
