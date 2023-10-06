@@ -6,11 +6,6 @@ export default function TextForm(props) {
 		setText(newText);
 		props.showAlert("Converted to uppercase!", "success");
 	};
-	const handlelowerClick = () => {
-		let newText = text.toLowerCase();
-		setText(newText);
-		props.showAlert("Converted to uppercase!", "success");
-	};
 
 	const handleOnChange = (event) => {
 		setText(event.target.value);
@@ -55,13 +50,6 @@ export default function TextForm(props) {
 					onClick={handleCopy}
 				>
 					Copy Text
-				</button>
-				<button
-					disabled={text.length === 0}
-					className="btn btn-primary mx-1 my-1"
-					onClick={handlelowerClick}
-				>
-					Convert to Lowercase
 				</button>
 			</div>
 			<div
