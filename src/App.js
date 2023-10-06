@@ -37,7 +37,7 @@ function App() {
 				<Navbar
 					title="Text-Tools"
 					mode={mode}
-					toggleMode={toggleMode}
+					toggleMode={ toggleMode }
 					key={new Date()}
 				/>
 				<Alert alert={alert} />
