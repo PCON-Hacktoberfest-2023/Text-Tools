@@ -28,12 +28,11 @@ export default function TextForm(props) {
     props.showAlert("Text Cleared!", "success");
   };
 
-  const handleExtraSpaces =() => 
-  {
-	let newText = text.split(/[ ]+/); 
-	setText(newText.join(" "));
-	alert("Extra Spaces have been removed ") ; 
-  }
+  const handleExtraSpaces = () => {
+    let newText = text.split(/[ ]+/);
+    setText(newText.join(" "));
+    alert("Extra Spaces have been removed ");
+  };
 
   const [text, setText] = useState("");
   return (
@@ -76,6 +75,13 @@ export default function TextForm(props) {
           onClick={handleExtraSpaces}
         >
           Remove extra spaces
+        </button>
+        <button
+          disabled={text.length === 0}
+          className="btn btn-primary mx-1 my-1"
+          onClick={handleClearClick}
+        >
+          Clear Text
         </button>
       </div>
       <div
